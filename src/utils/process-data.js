@@ -1,4 +1,3 @@
-const _ = require('lodash');
 const { SignJWT } = require('jose/jwt/sign');
 const crypto = require('crypto');
 
@@ -21,6 +20,27 @@ function flattenMarkdownData() {
         };
     };
 }
+
+/**
+ *
+ * @param {Object} object
+ * @param {Array | String} path
+ * @param {*} [defaultValue]
+ * @return {*}
+ */
+const getDataFromPath = (object, path = [], defaultValue) => {
+    if (typeof path === 'string') {
+        path = path.split('.');
+    }
+    for (const pathItem of path) {
+        if (pathItem in object) {
+            object = object[pathItem];
+        } else {
+            return defaultValue;
+        }
+    }
+    return object;
+};
 
 /**
  * Resolves reference fields to their data.
@@ -96,6 +116,38 @@ function mapDeep(value, iteratee, _keyPath = [], _objectStack = []) {
     return value;
 }
 
+function resolvePageProps({ page, data, pagePropsResolvers = [] }) {
+    return reduceDeep(
+        page,
+        (accum, value, keyPath, objectStack) => {
+            return pagePropsResolvers.reduce((accum, resolver) => {
+                if (resolver.match(value, keyPath, objectStack)) {
+                    Object.assign(accum, resolver.resolveProps(data));
+                }
+                return accum;
+            }, accum);
+        },
+        {}
+    );
+}
+
+function reduceDeep(value, iteratee, accum) {
+    function _reduceDeep(accum, value, keyPath = [], objectStack = []) {
+        accum = iteratee(accum, value, keyPath, objectStack);
+        if (value && typeof value == 'object' && value.constructor === Object) {
+            accum = Object.entries(value).reduce((accum, [key, val]) => {
+                return _reduceDeep(accum, val, keyPath.concat(key), objectStack.concat(value));
+            }, accum);
+        } else if (Array.isArray(value)) {
+            accum = value.reduce((accum, val, key) => {
+                return _reduceDeep(accum, val, keyPath.concat(key), objectStack.concat(value));
+            }, accum);
+        }
+        return accum;
+    }
+    return _reduceDeep(accum, value);
+}
+
 async function postProcessContactFormEmail(contactEmail) {
     if (!process.env.STACKBIT_CONTACT_FORM_SECRET) {
         console.error(`No STACKBIT_CONTACT_FORM_SECRET provided. It will not work properly for production build.`);
@@ -119,7 +171,7 @@ function postProcessContactFormEmails() {
         });
         await Promise.all(
             paths.map(async (path) => {
-                const form = _.get(data, path);
+                const form = getDataFromPath(data, path);
                 form.destination = await postProcessContactFormEmail(form.destination);
             })
         );
@@ -130,5 +182,6 @@ function postProcessContactFormEmails() {
 module.exports = {
     resolveReferenceFields,
     flattenMarkdownData,
-    postProcessContactFormEmails
+    postProcessContactFormEmails,
+    resolvePageProps
 };

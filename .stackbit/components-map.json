@@ -13,7 +13,6 @@
         "FormBlock": null,
         "HeroSection": null,
         "ImageBlock": null,
-        "InlineMarkdown": null,
         "NavBar": null,
         "QuoteSection": null,
         "SelectFormControl": null,
@@ -23,9 +22,9 @@
         "TextFormControl": null,
         "TextSection": null,
         "VideoBlock": null,
-        "FeatureSection": null,
-        "AdvancedLayout": null,
-        "PostLayout": null
+        "PageLayout": null,
+        "PostLayout": null,
+        "InlineMarkdown": null
     },
     "dynamic": {
         "CheckboxFormControl": "@stackbit/components/components/CheckboxFormControl",
@@ -44,8 +43,7 @@
         "TextFormControl": "@stackbit/components/components/TextFormControl",
         "TextSection": "@stackbit/components/components/TextSection",
         "VideoBlock": "@stackbit/components/components/VideoBlock",
-        "FeatureSection": "@stackbit/components/components/FeatureSection",
-        "AdvancedLayout": "@stackbit/components/layouts/AdvancedLayout",
+        "PageLayout": "@stackbit/components/layouts/PageLayout",
         "PostLayout": "@stackbit/components/layouts/PostLayout",
         "ExampleSection": "../src/components/ExampleSection.js"
     }
