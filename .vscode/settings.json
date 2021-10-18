@@ -10,6 +10,7 @@
     },
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // "editor.defaultFormatter": "redhat.vscode-yaml",
         "editor.tabSize": 2
     },
     "[markdown]": {

@@ -2,7 +2,6 @@
     "README": "Components set to 'null' will be loaded from @stackbit/components library. To override a component, set it to relative paths of your component",
     "components": {
         "Action": null,
-        "Badge": null,
         "CheckboxFormControl": null,
         "ContactSection": null,
         "CtaSection": null,
@@ -23,8 +22,7 @@
         "TextSection": null,
         "VideoBlock": null,
         "PageLayout": null,
-        "PostLayout": null,
-        "InlineMarkdown": null
+        "PostLayout": null
     },
     "dynamic": {
         "CheckboxFormControl": "@stackbit/components/components/CheckboxFormControl",
@@ -44,7 +42,6 @@
         "TextSection": "@stackbit/components/components/TextSection",
         "VideoBlock": "@stackbit/components/components/VideoBlock",
         "PageLayout": "@stackbit/components/layouts/PageLayout",
-        "PostLayout": "@stackbit/components/layouts/PostLayout",
-        "ExampleSection": "../src/components/ExampleSection.js"
+        "PostLayout": "@stackbit/components/layouts/PostLayout"
     }
 }
