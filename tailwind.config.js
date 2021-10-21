@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const themeStyle = require('./content/data/style.json');
 
 module.exports = {
-    presets: [require('@stackbit/components/styles/default/tailwind.default.config.js')],
+    presets: [require('@stackbit/components/styles/tailwind.default.config.js')],
     mode: 'jit',
     purge: {
         enabled: true,
