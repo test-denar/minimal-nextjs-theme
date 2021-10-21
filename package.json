@@ -1,5 +1,5 @@
 {
-    "name": "stackbit-nextjs-theme",
+    "name": "minimal-nextjs-theme",
     "version": "0.1.0",
     "scripts": {
         "dev": "next dev",
