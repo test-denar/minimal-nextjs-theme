@@ -38,6 +38,32 @@ bottomSections:
         textAlign: left
       actions:
         justifyContent: flex-start
+seo:
+  title: Post Title Two
+  description: The Stackbit theme is flexible and scalable to every need.
+  extra:
+    - name: 'og:type'
+      value: website
+      keyName: property
+    - name: 'og:title'
+      value: Post Title Two
+      keyName: property
+    - name: 'og:description'
+      value: The Stackbit theme is flexible and scalable to every need.
+      keyName: property
+    - name: 'og:image'
+      value: images/post-3.jpeg
+      keyName: property
+      relativeUrl: true
+    - name: 'twitter:card'
+      value: summary_large_image
+    - name: 'twitter:title'
+      value: Post Title Two
+    - name: 'twitter:description'
+      value: The Stackbit theme is flexible and scalable to every need.
+    - name: 'twitter:image'
+      value: images/post-3.jpeg
+      relativeUrl: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante lorem, tincidunt ac leo efficitur, feugiat tempor odio. Curabitur at auctor sapien. Etiam at cursus enim. Suspendisse sed augue tortor. Nunc eu magna vitae lorem pellentesque fermentum. Sed in facilisis dui. Nulla molestie risus in mi dapibus, eget porta lorem semper. Donec sed facilisis nibh. Curabitur eget dui in libero euismod commodo nec sit amet est. Etiam id ipsum aliquam, vehicula erat sit amet, consequat tortor.

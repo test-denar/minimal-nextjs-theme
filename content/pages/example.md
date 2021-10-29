@@ -298,4 +298,30 @@ sections:
         fontWeight: 400
         fontStyle: normal
         textAlign: left
+seo:
+  title: Stackbit Minimal Theme Example Page
+  description: The preview of the Minimal theme example page
+  extra:
+    - name: 'og:type'
+      value: website
+      keyName: property
+    - name: 'og:title'
+      value: Stackbit Minimal Theme
+      keyName: property
+    - name: 'og:description'
+      value: The preview of the Minimal theme example page
+      keyName: property
+    - name: 'og:image'
+      value: images/hero.png
+      keyName: property
+      relativeUrl: true
+    - name: 'twitter:card'
+      value: summary_large_image
+    - name: 'twitter:title'
+      value: Stackbit Minimal Theme
+    - name: 'twitter:description'
+      value: The preview of the Minimal theme example page
+    - name: 'twitter:image'
+      value: images/hero.png
+      relativeUrl: true
 ---

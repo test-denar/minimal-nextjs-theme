@@ -29,4 +29,30 @@ sections:
         textAlign: center
       actions:
         justifyContent: center
+seo:
+  title: Stackbit Minimal Theme Blog Page
+  description: The preview of the Minimal theme blog page
+  extra:
+    - name: 'og:type'
+      value: website
+      keyName: property
+    - name: 'og:title'
+      value: Stackbit Minimal Theme
+      keyName: property
+    - name: 'og:description'
+      value: The preview of the Minimal theme blog page
+      keyName: property
+    - name: 'og:image'
+      value: images/hero.png
+      keyName: property
+      relativeUrl: true
+    - name: 'twitter:card'
+      value: summary_large_image
+    - name: 'twitter:title'
+      value: Stackbit Minimal Theme
+    - name: 'twitter:description'
+      value: The preview of the Minimal theme blog page
+    - name: 'twitter:image'
+      value: images/hero.png
+      relativeUrl: true
 ---
