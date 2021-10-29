@@ -29,22 +29,29 @@ sections:
         height: auto
         width: wide
         margin: ["mt-0", "mb-0"]
-        padding: ["pt-10", "pb-10"]
+        padding: ["pt-12", "pb-12"]
         alignItems: center
         justifyContent: center
         flexDirection: row
+        borderRadius: none
+        borderWidth: 0
+        borderStyle: none
+        borderColor: border-neutral
       title:
         fontWeight: 700
         fontStyle: normal
         textAlign: left
+        margin: ["mt-0", "mb-4"]
       subtitle:
         fontWeight: 400
         fontStyle: normal
         textAlign: left
+        margin: ["mt-0", "mb-6"]
       text:
         textAlign: left
+        margin: ["mt-0", "mb-8"]
       actions:
-        justifyContent: start
+        justifyContent: flex-start
   - type: FeaturedPostsSection
     variant: variant-c
     colors: colors-c
@@ -59,7 +66,7 @@ sections:
         height: auto
         width: wide
         margin: ["mt-0", "mb-0"]
-        padding: ["pt-10", "pb-10"]
+        padding: ["pt-12", "pb-12"]
         alignItems: center
         justifyContent: center
       title:
@@ -103,7 +110,7 @@ sections:
         height: auto
         width: wide
         margin: ["mt-0", "mb-0"]
-        padding: ["pt-10", "pb-10"]
+        padding: ["pt-12", "pb-12"]
         alignItems: center
         justifyContent: center
       title:
@@ -131,7 +138,7 @@ sections:
         height: auto
         width: wide
         margin: ["mt-0", "mb-0"]
-        padding: ["pt-10", "pb-10"]
+        padding: ["pt-12", "pb-12"]
         alignItems: center
         justifyContent: center
         flexDirection: row
@@ -142,7 +149,7 @@ sections:
       text:
         textAlign: left
       actions:
-        justifyContent: start
+        justifyContent: flex-start
   - type: TextSection
     colors: colors-f
     backgroundWidth: full
@@ -155,7 +162,7 @@ sections:
         height: auto
         width: wide
         margin: ["mt-0", "mb-0"]
-        padding: ["pt-10", "pb-10"]
+        padding: ["pt-12", "pb-12"]
         alignItems: center
         justifyContent: center
       title:
@@ -212,7 +219,7 @@ sections:
         height: auto
         width: wide
         margin: ["mt-0", "mb-0"]
-        padding: ["pt-10", "pb-10"]
+        padding: ["pt-12", "pb-12"]
         alignItems: center
         justifyContent: center
         flexDirection: row
